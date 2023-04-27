@@ -1,0 +1,30 @@
+
+POST http://127.0.0.1:5000/notes HTTP/1.1
+content-type: application/json
+
+[{
+    "text": "sample note",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT",
+    "id" : "12"
+}]
+
+###
+DELETE  http://127.0.0.1:5000/notes HTTP/1.1
+content-type: application/json
+
+{"id":"1"}
+
+###
+GET  http://127.0.0.1:5000/notes HTTP/1.1
+content-type: application/json
+
+{"id":"1"}
+
+###
+PUT http://127.0.0.1:5000/notes HTTP/1.1
+content-type: application/json
+
+{
+    "text": "sample note change",
+    "id" : "1"
+}
